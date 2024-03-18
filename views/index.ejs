@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload files</title>
+</head>
+<body>
+    <h1>Welcome to our website</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        <input type="file" name="file"><br><br>
+        <input type="text" name="name" placeholder="Entrer your name"><br><br>
+        <input type="submit" value="Save">
+    </form>
+    <p>
+        <hr>
+    </p>
+    <h2>Liste des personnes</h2>
+    <ul>
+        <% persons.forEach((person) => { %>
+            <li><%- include('person', {person}) %></li>
+        <% }) %>
+    </ul>
+</body>
+</html>
